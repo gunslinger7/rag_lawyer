@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="de" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bürgerservice - Trefferliste</title>
+  <link href="https://www.gesetze-bayern.de/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://www.gesetze-bayern.de/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="https://www.gesetze-bayern.de/apple-touch-icon-precomposed.png">
+
+  <link rel="stylesheet" href="17_files/styles.css">
+  
+
+  <script id="usercentrics-cmp" src="17_files/loader.js" data-settings-id="fyxvNFVrU" async="" data-avoid-prefetch-services=""></script>
+  
+  <script src="17_files/modernizr.js"></script><script type="module" src="17_files/index.module.js"></script>
+<link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+<body>
+
+<form action="/Search" id="searchForm" method="post">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="row" id="header">
+        <div class="col-xs-12 col-sm-4" style="padding-right: 0px; padding-left: 0px;">
+            <a class="navbarItem" href="https://www.gesetze-bayern.de/" title="Zur Startseite von BAYERN.RECHT">
+                <img src="17_files/logo_bayern-recht.png" class="img-responsive pull-left hidden-xs" alt="Logo Bayern.Recht">
+            </a>
+        </div>
+        <div id="portalLogo" class="col-xs-12 col-sm-8" style="padding-right: 0px; padding-left: 0px;">
+            <img src="17_files/logo_bayern.png" class="img-responsive pull-right hidden-xs" alt="Logo Bayern">
+            <img src="17_files/logo_xs_bayern.png" class="img-responsive pull-right visible-xs" alt="Logo Bayern">
+        </div>
+    </div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+
+    <ul class="nav navbar-nav col-xs-8 col-sm-4 col-lg-3">
+        <li>
+                <a class="navbarItem" href="https://www.gesetze-bayern.de/" title="Zur Startseite von BAYERN.RECHT"><span style="font-size: 20px" class="glyphicon glyphicon-home"></span><span class="sr-only">Zur Startseite von BAYERN.RECHT</span></a>
+        </li>
+        <li>
+                <span class="navbarItem active" title="Trefferliste der letzten Suche"><span style="font-size: 20px; color: lightgray" class="glyphicon glyphicon-list"></span><span class="sr-only">Trefferliste der letzten Suche</span></span>
+        </li>
+    </ul>
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+    <div class="col-sm-5 col-lg-6" id="searchPanelDiv">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div style="padding:0px">
+              <div class="navbar-form">
+  <div at-target="searchSuggestInputGroup" class="input-group">
+    <input at-target="searchPanelBox" autocomplete="off" class="form-control" id="searchPanelBox" name="SearchFields.Content" aria-label="Suche" placeholder="Suche" title="Geben Sie die zu suchenden Begriffe wie Schlagworte, Aktenzeichen, Zitate in beliebiger Reihenfolge ein..." type="text">
+    <div style="width: 85px" class="input-group-btn">
+      <button at-target="searchPanelBoxClearer" id="searchPanelBoxClearer" title="Suche zurücksetzen" class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i><span class="sr-only">Suche zurücksetzen</span></button>
+      <button at-target="searchPanelBoxSubmit" class="btn btn-default" title="Suche ausführen" type="submit" style="padding: 3px 14px"><i style="font-size: 21px" class="glyphicon glyphicon-search"></i><span class="sr-only">Suche ausführen</span></button>
+    </div>
+  </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</nav>
+      <div class="container">
+            <div class="row">
+                
+<div id="navigation" role="navigation" class="col-sm-4 col-lg-3">
+    <h1 class="sr-only">Navigation</h1>
+  <div id="facets" class="nav">
+    <div class="panel-group">
+
+        
+<div class="panel panel-default">
+    <div class="panel-heading  ">
+        <div class="panel-title" title="Vorschriften (2657)">
+            <img src="17_files/hitlist_gesetz.png" alt="gesetz">
+                <a href="https://www.gesetze-bayern.de/Search/Filter/DOKTYP/norm" class="panel-group-item navPanelHeading">Vorschriften <span class="facet-count">(2657)</span></a>
+        </div>
+    </div>
+    <div id="rechtsvorschriften" class="panel-collapse collapse in documentNavigationType">
+        <div class="panel-body">
+            <div class="tree">
+                <ul class="list-group">
+                    
+<li class="list-group-item node-tree  node-selected " data-level="1" data-nodeid="2" data-docid="NORMTYP-ges" data-fieldname="NORMTYP" data-fieldvalue="ges" data-parent="" data-root="" data-count="242" title="Gesetze (242)">
+
+<span class="icon"><i class="glyphicon spacer"></i></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/NORMTYP/ges">Gesetze <span class="facet-count">(242)</span></a></li>
+
+<li class="list-group-item node-tree   " data-level="1" data-nodeid="1" data-docid="NORMTYP-rv" data-fieldname="NORMTYP" data-fieldvalue="rv" data-parent="" data-root="" data-count="510" title="Rechtsverordnungen (510)">
+
+<span class="icon"><i class="glyphicon spacer"></i></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/NORMTYP/rv">Rechtsverordnungen <span class="facet-count">(510)</span></a></li>
+
+<li class="list-group-item node-tree   " data-level="1" data-nodeid="0" data-docid="NORMTYP-vv" data-fieldname="NORMTYP" data-fieldvalue="vv" data-parent="" data-root="" data-count="1697" title="Verwaltungsvorschriften (1697)">
+
+<span class="icon"><i class="glyphicon spacer"></i></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/NORMTYP/vv">Verwaltungsvorschriften <span class="facet-count">(1697)</span></a></li>
+
+<li class="list-group-item node-tree   " data-level="1" data-nodeid="3" data-docid="NORMTYP-vertr" data-fieldname="NORMTYP" data-fieldvalue="vertr" data-parent="" data-root="" data-count="208" title="Verträge, sonstige Rechtsquellen (208)">
+
+<span class="icon"><i class="glyphicon spacer"></i></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/NORMTYP/vertr">Verträge, sonstige Rechtsquellen <span class="facet-count">(208)</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+<div class="panel panel-default">
+    <div class="panel-heading  ">
+        <div class="panel-title" title="Gerichtsentscheidungen (29034)">
+            <img src="17_files/hitlist_rechtsprechung.png" alt="rechtsprechung">
+                <a href="https://www.gesetze-bayern.de/Search/Filter/DOKTYP/rspr" class="panel-group-item navPanelHeading">Gerichtsentscheidungen <span class="facet-count">(29034)</span></a>
+        </div>
+    </div>
+    <div id="gerichtsentscheidungen" class="panel-collapse collapse in documentNavigationType">
+        <div class="panel-body">
+            <div class="tree">
+                <ul class="list-group">
+                    
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="0" data-docid="LEVEL1RSPRTREENODE-Verfassungsgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Verfassungsgerichtsbarkeit" data-parent="" data-root="" data-count="193" title="Verfassungsgerichtsbarkeit (193)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Verfassungsgerichtsbarkeit">Verfassungsgerichtsbarkeit <span class="facet-count">(193)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="1" data-docid="LEVEL1RSPRTREENODE-Ordentliche Gerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Ordentliche Gerichtsbarkeit" data-parent="" data-root="" data-count="8528" title="Ordentliche Gerichtsbarkeit (8528)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Ordentliche%20Gerichtsbarkeit">Ordentliche Gerichtsbarkeit <span class="facet-count">(8528)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="2" data-docid="LEVEL1RSPRTREENODE-Verwaltungsgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Verwaltungsgerichtsbarkeit" data-parent="" data-root="" data-count="17724" title="Verwaltungsgerichtsbarkeit (17724)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Verwaltungsgerichtsbarkeit">Verwaltungsgerichtsbarkeit <span class="facet-count">(17724)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="3" data-docid="LEVEL1RSPRTREENODE-Finanzgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Finanzgerichtsbarkeit" data-parent="" data-root="" data-count="478" title="Finanzgerichtsbarkeit (478)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Finanzgerichtsbarkeit">Finanzgerichtsbarkeit <span class="facet-count">(478)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="4" data-docid="LEVEL1RSPRTREENODE-Arbeitsgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Arbeitsgerichtsbarkeit" data-parent="" data-root="" data-count="687" title="Arbeitsgerichtsbarkeit (687)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Arbeitsgerichtsbarkeit">Arbeitsgerichtsbarkeit <span class="facet-count">(687)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="5" data-docid="LEVEL1RSPRTREENODE-Schiedsgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Schiedsgerichtsbarkeit" data-parent="" data-root="" data-count="1" title="Schiedsgerichtsbarkeit (1)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Schiedsgerichtsbarkeit">Schiedsgerichtsbarkeit <span class="facet-count">(1)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="6" data-docid="LEVEL1RSPRTREENODE-Sozialgerichtsbarkeit" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Sozialgerichtsbarkeit" data-parent="" data-root="" data-count="1402" title="Sozialgerichtsbarkeit (1402)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Sozialgerichtsbarkeit">Sozialgerichtsbarkeit <span class="facet-count">(1402)</span></a></li>
+
+<li class="list-group-item node-tree collapsed  " data-level="1" data-nodeid="7" data-docid="LEVEL1RSPRTREENODE-Sonstige Gerichte" data-fieldname="LEVEL1RSPRTREENODE" data-fieldvalue="Sonstige Gerichte" data-parent="" data-root="" data-count="21" title="Sonstige Gerichte (21)">
+
+<span class="icon" role="button" style=""><i tabindex="0" class="click-expand glyphicon glyphicon-plus"></i><span class="sr-only">Bereich erweitern</span></span><span class="icon"><i></i></span><a href="https://www.gesetze-bayern.de/Search/Filter/LEVEL1RSPRTREENODE/Sonstige%20Gerichte">Sonstige Gerichte <span class="facet-count">(21)</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+<div class="panel panel-default">
+    <div class="panel-heading inactive">
+        <div class="panel-title" title="RSS-Feed Gerichtsentscheidungen">
+            <img src="17_files/rss-icon.png" alt="rss" style="float:left">
+            <span style="display:inline-block; margin-top:1px; margin-left: 3px;">
+                RSS-Feed Gerichtsentscheidungen
+            </span>
+        </div>
+    </div>
+    <div id="rss" class="panel-collapse collapse in documentNavigationType">
+        <div class="panel-body" style=" padding-bottom: 8px">
+            <span style="padding-left:25px; font-size: 90%">
+                <a href="https://www.gesetze-bayern.de/Content/Document/Rss">Abonnieren Sie hier!</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+        
+<div class="panel panel-default">
+    <div class="panel-heading inactive">
+        <div class="panel-title" title="Fortführungsnachweise">
+            <img src="17_files/ffn.png" alt="ffn" style="float:left">
+            <span style="display:inline-block; margin-top:2px; margin-left: 3px;">
+                Fortführungsnachweise
+            </span>
+        </div>
+    </div>
+    <div id="ffn" class="panel-collapse collapse in documentNavigationType">
+        <div class="panel-body" style="padding-bottom: 8px; padding-left:25px;">
+            <div>
+                <span style="font-size: 90%">
+                    <a href="https://www.gesetze-bayern.de/Content/Document/ffn">Rechtsvorschriften</a>
+                </span>
+            </div>
+            <div>
+                <span style="font-size: 90%">
+          <a href="https://www.gesetze-bayern.de/Content/Document/ffn-mbl">Verwaltungsvorschriften (BayMBl.)</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+</div>
+<div role="search" class="col-sm-8 col-lg-6" style="padding:0px">
+    <h1 class="sr-only">Suche</h1>
+<div id="filterPanel">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Eingeschränkt auf:
+        </div>
+        <ul>
+            
+<li>
+    <span></span>Gesetze
+    <a href="https://www.gesetze-bayern.de/Search/Filter/NORMTYP/ges/null/null/remove" title="Filter entfernen"><span class="glyphicon glyphicon-remove" style="padding-left:10px;"></span><span class="sr-only">Filter entfernen</span></a>
+</li>
+
+        </ul>
+    </div>
+</div>
+<div id="advancedSearch">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span>Vorschriften weiter einschränken:</span>
+            <a href="https://www.gesetze-bayern.de/Content/Document/Hilfe#Hilfe-2" title="Hilfe"><span class="glyphicon glyphicon-question-sign pull-right" style="font-size:15px;"></span><span class="sr-only">Hilfe</span></a>
+            <span id="clearer" title="Eingaben löschen" class="glyphicon glyphicon-trash pull-right" style="padding-right:20px;"></span><span class="sr-only">Eingaben löschen</span>
+            
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <input autocomplete="off" class="form-control input-sm" id="gesabkSearchField" name="SearchFields.Abkuerzung" placeholder="Abkürzung" title="Geben Sie hier die amtliche Abkürzung der Vorschrift ein" type="text">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <input autocomplete="off" class="form-control input-sm" id="glnrSearchField" name="SearchFields.Gliederungsnummer" placeholder="Gliederungsnummer" title="Geben Sie hier die Gliederungsnummer nach dem in Sachgebiete aufgeteilten Gliederungsplan der Bayerischen Rechtssammlung ein" type="text">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <input autocomplete="off" class="form-control input-sm" id="fundstSearchField" name="SearchFields.Fundstelle" placeholder="Fundstelle" title="Geben Sie hier die Fundstelle im Bayerischen Gesetz- und Verordnungsblatt (GVBl.) ein" type="text">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7">
+            <button class="btn btn-sm btn-default" type="submit" title="Suche ausführen">Suchen</button>
+        </div>
+    </div>
+    
+<div id="buchstabenleisteDiv" class="btn-group btn-group-xs">
+    
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/A" role="button" title="" class="  btn btn-default">A</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/B" role="button" title="" class="  btn btn-default">B</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/C" role="button" title="" class="  btn btn-default">C</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/D" role="button" title="" class="disabled  btn btn-default">D</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/E" role="button" title="" class="  btn btn-default">E</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/F" role="button" title="" class="  btn btn-default">F</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/G" role="button" title="" class="  btn btn-default">G</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/H" role="button" title="" class="  btn btn-default">H</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/I" role="button" title="" class="  btn btn-default">I</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/J" role="button" title="" class="  btn btn-default">J</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/K" role="button" title="" class="  btn btn-default">K</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/L" role="button" title="" class="  btn btn-default">L</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/M" role="button" title="" class="  btn btn-default">M</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/N" role="button" title="" class="disabled  btn btn-default">N</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/O" role="button" title="" class="disabled  btn btn-default">O</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/P" role="button" title="" class="  btn btn-default">P</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/Q" role="button" title="" class="disabled  btn btn-default">Q</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/R" role="button" title="" class="  btn btn-default">R</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/S" role="button" title="" class="  btn btn-default">S</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/T" role="button" title="" class="  btn btn-default">T</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/U" role="button" title="" class="disabled  btn btn-default">U</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/V" role="button" title="" class="  btn btn-default">V</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/W" role="button" title="" class="disabled  btn btn-default">W</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/X" role="button" title="" class="disabled  btn btn-default">X</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/Y" role="button" title="" class="disabled  btn btn-default">Y</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/Z" role="button" title="" class="  btn btn-default">Z</a>
+
+
+<a href="https://www.gesetze-bayern.de/Search/Filter/GESSORTCHAR/asterix" role="button" title="0-9; Sonderzeichen" class="disabled  btn btn-default">*</a>
+
+        <a role="button" class="btn btn-default disabled"><span style="color:#707070; cursor:default" title="Filter löschen (inaktiv)" class="glyphicon glyphicon-trash"></span><span class="sr-only">Filter löschen (inaktiv)</span></a>
+</div>
+
+
+</div>
+            <div id="hitlistHeader">
+                <hr>
+                <p id="readable">242 Treffer in 242 Gesetze</p>
+                <hr>
+            </div>
+
+<div id="hitlist" at-target="hitlist">
+    <ul>
+        
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGVereinsG?hl=true">Gesetz zur Ausführung des Vereinsgesetzes (AGVereinsG) Vom 15. Dezember 1965 BayRS 2180-1-I</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayDarlRueVerwG?hl=true">Gesetz
+ über die Verwendung der Rückflüsse aus Darlehen des Freistaates Bayern 
+zur Förderung des Wohnungsbaues Vom 23. März 1962 (BayRS IV S. 425) 
+BayRS 2330-6-B</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayOePNVG?hl=true">Gesetz
+ über den öffentlichen Personennahverkehr in Bayern (BayÖPNVG) in der 
+Fassung der Bekanntmachung vom 30. Juli 1996 (GVBl. S. 336) BayRS 
+922-1-B</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.01.2024</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayOeRVNeuOG?hl=true">Gesetz
+ zur Neuordnung der Rechtsverhältnisse der öffentlich-rechtlichen 
+Versicherungsanstalten des Freistaates Bayern Vom 23. Juli 1994 (GVBl. 
+S. 603) BayRS 763-15-I</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGGlueStV?hl=true">Gesetz
+ zur Ausführung des Staatsvertrages zum Glücksspielwesen in Deutschland 
+(AGGlüStV) Vom 20. Dezember 2007 (GVBl. S. 922) BayRS 2187-3-I</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2022</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGPStG?hl=true">Gesetz zur Ausführung des Personenstandsgesetzes (AGPStG) Vom 8. Juli 2008 (GVBl. S. 344) BayRS 211-1-I</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGIHKG?hl=true">Gesetz
+ zur Ergänzung und Ausführung des Gesetzes zur vorläufigen Regelung des 
+Rechts der Industrie- und Handelskammern (AGIHKG) Vom 25. März 1958 
+BayRS 701-1-W</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGPIDV?hl=true">Gesetz zur Ausführung der Präimplantationsdiagnostikverordnung (BayAGPIDV) Vom 17. Dezember 2014 (GVBl S. 542) BayRS 453-2-G</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.05.2019</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayBUEG?hl=true">Gesetz
+ über die Übernahme von Staatsbürgschaften und Garantien des Freistaates
+ Bayern (BÜG) Vom 27. Juni 1972 (BayRS IV S. 695) BayRS 66-1-F</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.01.2021</p>
+    </div>
+</li>
+<li class="hitlistItem">
+    <div style="display:table-cell; padding-right: 5px; vertical-align: top">
+        <img title="Vorschrift" src="17_files/hitlist_gesetz.png" alt="Vorschrift">
+    </div>
+    <div style="display:table-cell;">
+            <p class="hltitel">
+                <a href="https://www.gesetze-bayern.de/Content/Document/BayAGFlurbG?hl=true">Gesetz
+ zur Ausführung des Flurbereinigungsgesetzes (AGFlurbG) in der Fassung 
+der Bekanntmachung vom 8. Februar 1994 (GVBl. S. 127) BayRS 7815-1-L</a>
+            </p>
+            <p class="hlSubTitel">Rechtsstand: 01.01.2012</p>
+    </div>
+</li>
+    </ul>
+</div>
+
+
+<div id="pager">
+    <nav>
+        <ul class="pagination">
+                <li><a href="https://www.gesetze-bayern.de/Search/Page/16" title="Vorherige Seite">←</a></li>
+                            
+            <li class=""><a href="https://www.gesetze-bayern.de/Search/Page/12">12</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/13">13</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/14">14</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/15">15</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/16">16</a></li>
+<li class="active"><a href="https://www.gesetze-bayern.de/Search/Page/17">17</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/18">18</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/19">19</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/20">20</a></li>
+<li class=""><a href="https://www.gesetze-bayern.de/Search/Page/21">21</a></li>
+
+
+                <li><a href="https://www.gesetze-bayern.de/Search/Page/18" title="Nächste Seite">→</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+<div class="col-lg-3 hidden-md hidden-sm hidden-xs" style="padding-right: 0px;">
+    <div class="panel-group">
+          <div id="tagcloud" class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title" title="Schlagworte">
+                <img src="17_files/hitlist_schlagworte.png" alt="Schlagworte">
+                <span>Schlagworte</span>
+            </div>
+        </div>
+        <div id="schlagworte" class="panel-collapse collapse in documentNavigationType">
+            <div class="panel-body">
+                <ul>
+                    <li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Arten">Arten</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Bayerische">Bayerische</a>
+</li>
+<li>
+    <a class="tcl-4" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Bayern">Bayern</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Bekannt">Bekannt</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Betrieb">Betrieb</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Dezember">Dezember</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Dienst">Dienst</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Entwicklung">Entwicklung</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Erlassen">Erlassen</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Freistaat">Freistaat</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Gebiet">Gebiet</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Gesundheitlich">Gesundheitlich</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Gesundheitsdienst">Gesundheitsdienst</a>
+</li>
+<li>
+    <a class="tcl-6" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/GVBl">GVBl</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Haushaltsgesetz">Haushaltsgesetz</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Landes%C3%A4mter">Landesämter</a>
+</li>
+<li>
+    <a class="tcl-3" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Landtag">Landtag</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/November">November</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Organisation">Organisation</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Pflege">Pflege</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Richter">Richter</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Richtlinie">Richtlinie</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Schutz">Schutz</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Staatsregierung">Staatsregierung</a>
+</li>
+<li>
+    <a class="tcl-1" href="https://www.gesetze-bayern.de/Search/Filter/skeyword1/Vollzug">Vollzug</a>
+</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</div>
+
+
+            </div>
+      </div>
+
+
+<div class="row footer">
+    <ul>
+        <li class="col-sm-3">
+            <a href="http://www.bayern.de/" target="_blank">Bayern.de</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="http://www.freistaat.bayern/" target="_blank">BayernPortal</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="https://www.gesetze-bayern.de/Content/Document/Datenschutz">Datenschutz</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="https://www.gesetze-bayern.de/Content/Document/Impressum">Impressum</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="https://www.gesetze-bayern.de/Content/Document/Barrierefreiheit">Barrierefreiheit</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="https://www.gesetze-bayern.de/Content/Document/Hilfe">Hilfe</a>
+        </li>
+        <li class="col-sm-3">
+            <a href="http://www.bayern.de/service/bayern-direkt-2/" target="_blank">Kontakt</a>
+        </li>
+        <li class="col-sm-3">
+            <button class="btn btn-link" id="adjustFontsize" type="button" data-original-title="" title=""><span style="font-size: 55%" class="glyphicon glyphicon-font" title="Schriftgröße"></span><span style="font-size: 90%" class="glyphicon glyphicon-font" title="Schriftgröße"></span><span class="sr-only">Schriftgröße</span></button>
+          <div id="adjustFontsizePopover" style="display: none">
+            <ul id="fontsize-list" class="popover-list">
+              <li><a id="btn-fontsize-small" href="https://www.gesetze-bayern.de/changefontsize?fontsize=small"><span>A</span></a></li>
+              <li><a id="btn-fontsize-normal" href="https://www.gesetze-bayern.de/changefontsize?fontsize=middle"><span>A</span></a></li>
+              <li><a id="btn-fontsize-large" href="https://www.gesetze-bayern.de/changefontsize?fontsize=large"><span>A</span></a></li>
+            </ul>
+          </div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <a href="https://www.gesetze-bayern.de/changecontrast" title="Kontrastwechsel"><span style="font-size: 120%" class="glyphicon glyphicon-adjust"></span><span class="sr-only">Kontrastwechsel</span></a>
+        </li>
+    </ul>
+</div><input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ho1o4gxnllGiNxn4ZWlDu6PITxqZocwtayKCcqyGDGbKmgHVvtv-ojipQ2MWs8oQJR6W1t2TmSwU05mb5stnZz9Wvqcm85M23OW5MFdgMxTx3xtneJ0m6A5aDsss12yIKNwo3kIuPwgr2_ex4NRBMU"></form>
+    <!-- Piwik -->
+<script type="text/plain" data-usercentrics="Matomo">
+        var _paq = _paq || [];
+        const regex = /-(?!bayern\.de)/g;
+        _paq.push(['setCustomUrl', location.href.replace(regex,'/') + '/']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        _paq.push(['setTrackerUrl', 'https://beck.matomo.cloud/matomo.php']);
+        _paq.push(['setSiteId', 4]);
+
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://beck.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+</script>
+<!-- End Piwik Code -->
+
+
+    <script src="17_files/jquery.js"></script>
+    
+    
+    <script src="17_files/Scripts.js"></script>
+
+
+<div style="" id="usercentrics-root" data-created-at="1719671546830"></div></body></html>
