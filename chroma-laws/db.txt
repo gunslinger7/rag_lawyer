@@ -1,0 +1,1 @@
+After saving the split chunks of text you will have chroma.sqlite3 file here and a corresponding folder. 
