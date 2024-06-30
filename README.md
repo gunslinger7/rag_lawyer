@@ -7,6 +7,7 @@
 This app aims to ease the process of obtaining legal information, simplifying it for better comprehension and making potential connections between different laws.
 It leverages data scraped from www.gesetze-bayern.de website and gpt-3.5-turbo for Retrieval Augmented Generation.
 
+* Link to database on Huggingface: https://huggingface.co/datasets/gunslinger7/bavarian_law_database
 
 
 ## Ⅱ Implementing
