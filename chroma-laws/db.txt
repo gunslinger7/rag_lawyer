@@ -1,1 +1,2 @@
 After saving the split chunks of text you will have chroma.sqlite3 file here and a corresponding folder. 
+link to database: https://huggingface.co/datasets/gunslinger7/bavarian_law_database
